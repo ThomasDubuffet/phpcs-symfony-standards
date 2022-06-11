@@ -1,5 +1,5 @@
 {
-    "name": "ThomasDubuffet/phpcs-symfony-standards",
+    "name": "tdubuffet/phpcs-symfony-standards",
     "description": "PHP_CodeSniffer with Symfony standards.",
     "type": "library",
     "require": {
