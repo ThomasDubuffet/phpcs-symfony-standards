@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CodeQuality\PHP_CodeSniffer\SymfonyStandard\Sniffs\Classes;
+namespace TDubuffet\Sniffs\Classes;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
