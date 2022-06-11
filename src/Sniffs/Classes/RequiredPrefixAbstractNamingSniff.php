@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace TDubuffet\Sniffs\Classes;
 
+use PHP_CodeSniffer\Files\File;
+use SlevomatCodingStandard\Helpers\ClassHelper;
+use SlevomatCodingStandard\Helpers\TokenHelper;
+
 /**
  * This sniff signals the absence of an "Abstract" prefix for abstract class.
  *
@@ -20,12 +24,22 @@ final class RequiredPrefixAbstractNamingSniff extends AbstractRequiredPrefixNami
     public function register(): array
     {
         return [
-            \T_ABSTRACT,
+            \T_CLASS,
         ];
     }
 
     public function getExpectedPrefix(): string
     {
         return 'Abstract';
+    }
+
+    public function process(File $phpcsFile, $stackPtr): void
+    {
+		$previousPointer = TokenHelper::findPreviousEffective($phpcsFile, $stackPtr - 1);
+		if ($phpcsFile->getTokens()[$previousPointer]['code'] !== T_ABSTRACT) {
+			return;
+		}
+
+        parent::process($phpcsFile, $stackPtr);
     }
 }
