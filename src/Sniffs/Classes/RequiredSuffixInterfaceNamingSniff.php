@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CodeQuality\PHP_CodeSniffer\SymfonyStandard\Sniffs\Classes;
+namespace TDubuffet\Sniffs\Classes;
 
 /**
  * This sniff signals the absence of an "Interface" suffix for interfaces.
