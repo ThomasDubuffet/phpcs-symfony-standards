@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<ruleset name="SymfonyStandard">
+    <description>Compliance with Symfony standards. See documentation: https://symfony.com/doc/current/contributing/code/standards.html</description>
+</ruleset>
